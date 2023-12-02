@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerenciamento de Tarefas</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container mt-3">
+        <h1>Gerenciamento de Tarefas</h1>
+        <form id="taskForm">
+            <div class="form-group">
+                <label for="taskName">Nome da Tarefa:</label>
+                <input type="text" class="form-control" id="taskName" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Descrição:</label>
+                <textarea class="form-control" id="description"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Adicionar Tarefa</button>
+        </form>
+
+        <hr>
+
+        <h2>Tarefas:</h2>
+        <div class="row" id="taskList">
+            <!-- Tarefas serão exibidas como cards do Bootstrap aqui -->
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+<!-- Alert de Edição -->
+<div class="alert alert-primary alert-dismissible fade" id="editTaskAlert" role="alert">
+    <h4 class="alert-heading">Editar Tarefa</h4>
+    <form id="editTaskForm">
+        <input type="hidden" id="editTaskId">
+        <div class="form-group">
+            <label for="editTaskName">Nome da Tarefa:</label>
+            <input type="text" class="form-control" id="editTaskName" required>
+        </div>
+        <div class="form-group">
+            <label for="editTaskDescription">Descrição:</label>
+            <textarea class="form-control" id="editTaskDescription"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+    </form>
+</div>
+
+</body>
+</html>
